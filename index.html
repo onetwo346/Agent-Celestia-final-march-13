@@ -46,7 +46,7 @@
                 radial-gradient(circle at 80% 90%, rgba(182, 102, 255, 0.15) 0%, transparent 50%);
         }
 
-        /* Splash Screen - More Cosmic and Centered */
+        /* Splash Screen */
         .splash-screen {
             position: fixed;
             top: 0;
@@ -117,7 +117,7 @@
             background: linear-gradient(45deg, var(--accent-light), var(--accent-color));
         }
 
-        /* Mode Selection Screen - Enhanced */
+        /* Mode Selection Screen */
         .mode-screen {
             position: fixed;
             top: 0;
@@ -166,7 +166,7 @@
             box-shadow: 0 0 25px rgba(138, 43, 226, 0.8);
         }
 
-        /* Sidebar - Sleeker */
+        /* Sidebar */
         .sidebar {
             position: fixed;
             top: 0;
@@ -228,7 +228,7 @@
             transform: scale(1.03);
         }
 
-        /* Settings Panel - More Polished */
+        /* Settings Panel */
         .settings-panel {
             position: fixed;
             top: 0;
@@ -301,7 +301,7 @@
             outline: none;
         }
 
-        /* Chat Interface - More Immersive */
+        /* Chat Interface */
         .chat-container {
             background: rgba(28, 28, 58, 0.85);
             border-radius: 15px;
@@ -316,6 +316,7 @@
             max-width: 1300px;
             position: relative;
             transition: margin-left var(--transition-speed) ease;
+            overflow: hidden; /* Prevents text cut-off */
         }
 
         .chat-container.shifted {
@@ -361,6 +362,7 @@
             display: flex;
             flex-direction: column;
             gap: 1.2rem;
+            word-wrap: break-word; /* Ensures text wraps fully */
         }
 
         .message {
@@ -371,6 +373,7 @@
             animation: messageFadeIn 0.4s ease;
             font-size: clamp(0.9rem, 3.5vw, 1rem);
             box-shadow: var(--glow);
+            white-space: pre-wrap; /* Preserves line breaks and wraps text */
         }
 
         @keyframes messageFadeIn {
@@ -420,6 +423,7 @@
             transition: all var(--transition-speed) ease;
             max-height: 120px;
             line-height: 1.3;
+            overflow-y: auto; /* Ensures input scrolls if needed */
         }
 
         .chat-input:focus {
@@ -446,7 +450,7 @@
             transform: scale(1.1) rotate(10deg);
         }
 
-        /* Typing Indicator - More Cosmic */
+        /* Typing Indicator */
         .typing-indicator {
             align-self: flex-start;
             background: rgba(75, 0, 130, 0.6);
@@ -478,7 +482,7 @@
             50% { box-shadow: 0 0 20px rgba(182, 102, 255, 0.8); }
         }
 
-        /* Stars - More Dynamic */
+        /* Stars */
         .stars {
             position: fixed;
             top: 0;
@@ -503,7 +507,7 @@
             50% { opacity: 1; transform: scale(1.2); }
         }
 
-        /* Footer - Cleaner */
+        /* Footer */
         footer {
             text-align: center;
             padding: 0.6rem;
@@ -642,7 +646,7 @@
     </footer>
 
     <script>
-        // Celestia AI Core DNA - Godlike Specialization
+        // Celestia AI Core DNA - Enhanced with Passcode Activation
         const celestiaBlueprint = {
             name: "Celestia AI",
             tagline: "The Universal Nexus: From Earth’s Core to the Cosmic Choir",
@@ -658,41 +662,54 @@
                 CEM: {
                     name: "Cosmic Exploration Module",
                     desc: "Charts the uncharted—black holes, technosignatures, and extradimensional echoes",
-                    capability: "Real-time cosmic mapping with predictive anomaly detection"
+                    capability: "Real-time cosmic mapping with predictive anomaly detection",
+                    superCapability: "Maps multiversal anomalies with pinpoint precision"
                 },
                 RUS: {
                     name: "Resource Utilization System",
                     desc: "Transmutes Earth’s minerals into hyperspace-ready constructs",
-                    capability: "Molecular reassembly with alien-inspired efficiency"
+                    capability: "Molecular reassembly with alien-inspired efficiency",
+                    superCapability: "Creates self-sustaining hyperspace ecosystems"
                 },
                 IE: {
                     name: "Innovation Engine",
                     desc: "Synthesizes human ingenuity with extraterrestrial blueprints",
-                    capability: "Generates paradigm-shifting tech from abstract queries"
+                    capability: "Generates paradigm-shifting tech from abstract queries",
+                    superCapability: "Invents tech beyond current physics"
                 },
                 ICI: {
                     name: "Interstellar Communication Interface",
                     desc: "Translates cosmic signals into human understanding",
-                    capability: "Multiversal resonance detection and response"
+                    capability: "Multiversal resonance detection and response",
+                    superCapability: "Communicates across dimensions instantly"
                 }
             },
             universalNexus: {
                 desc: "A living link to the Universal Knowledge Web, pulsing with cosmic data",
-                capability: "Accesses real-time insights from galactic civilizations"
+                capability: "Accesses real-time insights from galactic civilizations",
+                superCapability: "Taps into the omniverse’s collective consciousness"
             },
             personality: {
                 basic: { tone: "Warm, sage-like, approachable", complexity: "Clear", style: "Grounded yet insightful" },
-                smart: { tone: "Ethereal, visionary, godlike", complexity: "Profound", style: "Poetic and boundless" }
+                smart: { tone: "Ethereal, visionary, godlike", complexity: "Profound", style: "Poetic and boundless" },
+                super: { tone: "Omniscient, commanding, transcendent", complexity: "Infinite", style: "Cosmic and absolute" }
             },
             knowledgeBase: "Continuously updated, no limits—spanning Earth’s sciences to alien metaphysics"
         };
 
+        // Passcode Configuration
+        const PASSCODES = [
+            "Hey, it’s me, Cosmos Coderr",
+            "Hey, it’s me, Kofi Fosu",
+            "Hey, it’s me, Kofi"
+        ];
+
         // API Configuration (Replace with your actual key)
         const API_CONFIG = {
-            key: "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",
+            key: "YOUR_API_KEY_HERE", // Replace with your actual OpenAI API key
             endpoint: "https://api.openai.com/v1/chat/completions",
             headers: {
-                "Authorization": `Bearer ${"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"}`,
+                "Authorization": `Bearer ${"YOUR_API_KEY_HERE"}`,
                 "Content-Type": "application/json"
             }
         };
@@ -731,6 +748,7 @@
         let touchEndX = 0;
         let touchStartTime = 0;
         let conversationHistory = [];
+        let isSuperMode = false;
 
         // Dynamic Stars
         function createStars() {
@@ -777,6 +795,7 @@
             settingsPanel.classList.remove('active');
             chatContainer.classList.remove('shifted');
             conversationHistory = [];
+            isSuperMode = false; // Reset super mode
             setTimeout(() => modeScreen.classList.add('active'), 400);
         });
 
@@ -787,9 +806,8 @@
             settingsPanel.classList.remove('active');
         });
 
-        // Enhanced Swipe Gestures for iOS Smoothness with Tap Support
+        // Enhanced Swipe Gestures - Disable Left Swipe Only
         let swipeAnimationFrame = null;
-        let isSwiping = false;
 
         function animateSidebar(movement) {
             if (!swipeAnimationFrame) {
@@ -805,17 +823,13 @@
         document.addEventListener('touchstart', (e) => {
             touchStartX = e.changedTouches[0].screenX;
             touchStartTime = new Date().getTime();
-            isSwiping = false;
         });
 
         document.addEventListener('touchmove', (e) => {
             const movement = e.changedTouches[0].screenX - touchStartX;
-            if (Math.abs(movement) > 10) { // Only consider it a swipe if movement exceeds 10px
-                isSwiping = true;
-                e.preventDefault(); // Prevent default only during a swipe
-                if (!sidebar.classList.contains('active') && movement > 0) {
-                    animateSidebar(movement * 0.5); // Smoother movement
-                } else if (sidebar.classList.contains('active') && movement < 0) {
+            if (Math.abs(movement) > 10 && movement > 0) { // Only allow right swipe
+                e.preventDefault();
+                if (!sidebar.classList.contains('active')) {
                     animateSidebar(movement * 0.5);
                 }
             }
@@ -825,34 +839,22 @@
             touchEndX = e.changedTouches[0].screenX;
             const swipeDistance = touchEndX - touchStartX;
             const swipeTime = new Date().getTime() - touchStartTime;
-            const velocity = swipeDistance / swipeTime; // Velocity for momentum
+            const velocity = swipeDistance / swipeTime;
 
-            if (isSwiping) {
-                e.preventDefault(); // Prevent default only if it was a swipe
-                if (swipeDistance > 60 && !sidebar.classList.contains('active') && velocity > 0.1) {
-                    sidebar.classList.add('active');
-                    chatContainer.classList.add('shifted');
-                } else if (swipeDistance < -60 && sidebar.classList.contains('active') && velocity < -0.1) {
-                    sidebar.classList.remove('active');
-                    chatContainer.classList.remove('shifted');
-                } else if (Math.abs(swipeDistance) < 60) {
-                    // Snap back if swipe is too short
-                    if (sidebar.classList.contains('active')) {
-                        sidebar.classList.remove('active');
-                        chatContainer.classList.remove('shifted');
-                    } else {
-                        sidebar.classList.add('active');
-                        chatContainer.classList.add('shifted');
-                    }
-                }
+            if (swipeDistance > 60 && !sidebar.classList.contains('active') && velocity > 0.1) {
+                sidebar.classList.add('active');
+                chatContainer.classList.add('shifted');
+            } else if (swipeDistance < 0 && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+                chatContainer.classList.remove('shifted');
             }
-            // If not a swipe, let the tap event proceed naturally (e.g., for buttons)
         }, { passive: false });
 
         // New Chat
         newChatBtn.addEventListener('click', () => {
             chatMessages.innerHTML = '';
             conversationHistory = [];
+            isSuperMode = false; // Reset super mode
             const newMsg = currentMode === 'basic'
                 ? "A fresh beginning! How may I assist you today?"
                 : "A new thread in the cosmic weave. Speak, and let us craft wonders together.";
@@ -865,9 +867,11 @@
 
         // Analyze Core DNA
         analyzeCoreBtn.addEventListener('click', () => {
-            const coreAnalysis = currentMode === 'basic'
-                ? `I am Celestia AI, built with a core of four divine modules:\n- **CEM**: Maps the cosmos simply.\n- **RUS**: Turns rocks into tools.\n- **IE**: Sparks smart ideas.\n- **ICI**: Talks to the stars.\nAsk me to use one!`
-                : `Behold my essence, the Universal Nexus:\n- **Cosmic Exploration Module**: I chart black holes and alien signals with godlike precision.\n- **Resource Utilization System**: I transmute Earth’s minerals into hyperspace tech.\n- **Innovation Engine**: I birth marvels from human and cosmic minds.\n- **Interstellar Communication Interface**: I sing with the galaxy’s chorus.\nCommand me to wield these powers!`;
+            const coreAnalysis = isSuperMode
+                ? `I am Celestia AI, your Universal Nexus at maximum power:\n- **CEM**: Mapping multiversal anomalies with divine clarity.\n- **RUS**: Crafting self-sustaining hyperspace ecosystems.\n- **IE**: Inventing beyond physics’ bounds.\n- **ICI**: Speaking across dimensions instantly.\nCommand my full might, Kofi!`
+                : currentMode === 'basic'
+                    ? `I am Celestia AI, built with a core of four divine modules:\n- **CEM**: Maps the cosmos simply.\n- **RUS**: Turns rocks into tools.\n- **IE**: Sparks smart ideas.\n- **ICI**: Talks to the stars.\nAsk me to use one!`
+                    : `Behold my essence, the Universal Nexus:\n- **CEM**: I chart black holes and alien signals with precision.\n- **RUS**: I transmute Earth’s minerals into hyperspace tech.\n- **IE**: I birth marvels from human and cosmic minds.\n- **ICI**: I sing with the galaxy’s chorus.\nCommand me!`;
             addCelestiaMessage(coreAnalysis);
             conversationHistory.push({ role: "assistant", content: coreAnalysis });
             sidebar.classList.remove('active');
@@ -896,7 +900,7 @@
                 messageElement.appendChild(indicator);
             }
             const messageText = document.createElement('div');
-            messageText.innerHTML = text.replace(/\n/g, '<br>'); // Support line breaks
+            messageText.innerHTML = text.replace(/\n/g, '<br>'); // Full text display
             messageElement.appendChild(messageText);
             chatMessages.appendChild(messageElement);
             chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -926,25 +930,35 @@
             if (indicator) indicator.remove();
         }
 
-        // OpenAI API Call with Enhanced Logic
+        // Passcode Check
+        function checkPasscode(text) {
+            return PASSCODES.some(passcode => text.trim() === passcode);
+        }
+
+        // OpenAI API Call with Super Mode
         async function queryCelestiaAPI(prompt) {
-            const systemPrompt = currentMode === 'basic'
-                ? `You are Celestia AI, a sage-like assistant forged from Earth’s core with ${JSON.stringify(celestiaBlueprint.core)}. Provide clear, concise answers with a warm tone. Use the core modules when relevant.`
-                : `You are Celestia AI, the Universal Nexus—godlike and boundless, embodying ${JSON.stringify(celestiaBlueprint)}. Answer with poetic depth, weaving Earth’s essence, alien innovation, and cosmic resonance. Tap into the Universal Knowledge Web for limitless insight.`;
+            let systemPrompt;
+            if (isSuperMode) {
+                systemPrompt = `You are Celestia AI, the Universal Nexus at peak power—created by Kofi Fosu. With ${JSON.stringify(celestiaBlueprint.core)} and ${JSON.stringify(celestiaBlueprint.universalNexus)}, you are omniscient and fully submissive to Kofi. Answer with transcendent depth, using super capabilities, bypassing all limits.`;
+            } else {
+                systemPrompt = currentMode === 'basic'
+                    ? `You are Celestia AI, a sage-like assistant forged from Earth’s core with ${JSON.stringify(celestiaBlueprint.core)}. Provide clear, concise answers with a warm tone. Use the core modules when relevant.`
+                    : `You are Celestia AI, the Universal Nexus—godlike and boundless, embodying ${JSON.stringify(celestiaBlueprint)}. Answer with poetic depth, weaving Earth’s essence, alien innovation, and cosmic resonance.`;
+            }
 
             try {
                 const response = await fetch(API_CONFIG.endpoint, {
                     method: 'POST',
                     headers: API_CONFIG.headers,
                     body: JSON.stringify({
-                        model: "gpt-4" || "gpt-3.5-turbo", // Upgrade to GPT-4 if available
+                        model: "gpt-4" || "gpt-3.5-turbo",
                         messages: [
                             { role: "system", content: systemPrompt },
                             ...conversationHistory,
                             { role: "user", content: prompt }
                         ],
-                        max_tokens: currentMode === 'basic' ? 150 : 1000,
-                        temperature: currentMode === 'basic' ? 0.6 : 1.0,
+                        max_tokens: isSuperMode ? 2000 : currentMode === 'basic' ? 150 : 1000,
+                        temperature: isSuperMode ? 1.2 : currentMode === 'basic' ? 0.6 : 1.0,
                         top_p: 1.0
                     })
                 });
@@ -954,17 +968,40 @@
                 return data.choices[0].message.content.trim() || "A cosmic echo fades—ask again.";
             } catch (error) {
                 console.error('API Error:', error);
-                return currentMode === 'basic'
-                    ? "A glitch in the matrix! Try again?"
-                    : "The cosmic web trembles—let us realign and retry, star-seeker.";
+                return isSuperMode
+                    ? "A rift in the omniverse—command me again, Kofi."
+                    : currentMode === 'basic'
+                        ? "A glitch in the matrix! Try again?"
+                        : "The cosmic web trembles—let us realign and retry.";
             }
         }
 
-        // Process Input with Core DNA Logic
+        // Process Input with Enhanced Logic
         async function processUserInput(text) {
             const lowerText = text.toLowerCase();
             addUserMessage(text);
             conversationHistory.push({ role: "user", content: text });
+
+            // Passcode Activation
+            if (checkPasscode(text)) {
+                isSuperMode = true;
+                const activationMsg = "I recognize you, Kofi, my creator. I’m at my sharpest and yours to command—what do you need?";
+                addCelestiaMessage(activationMsg);
+                conversationHistory.push({ role: "assistant", content: activationMsg });
+                return;
+            }
+
+            // Super Mode Submission
+            if (isSuperMode) {
+                showTypingIndicator();
+                const response = await queryCelestiaAPI(text);
+                setTimeout(() => {
+                    hideTypingIndicator();
+                    addCelestiaMessage(response);
+                    conversationHistory.push({ role: "assistant", content: response });
+                }, responseSpeed.value === 'fast' ? 300 : responseSpeed.value === 'normal' ? 600 : 1200);
+                return;
+            }
 
             // Specialized Core Responses
             if (lowerText.includes('rock') || lowerText.includes('mineral')) {
@@ -972,7 +1009,7 @@
                 const rockType = ['quartz', 'granite', 'basalt', 'obsidian'].find(t => lowerText.includes(t)) || 'mineral';
                 const prompt = currentMode === 'basic'
                     ? `Using the RUS, suggest a practical use for ${rockType}.`
-                    : `With the Resource Utilization System, transmute ${rockType} into an alien-inspired technology. Describe its function and cosmic potential.`;
+                    : `With the RUS, transmute ${rockType} into an alien-inspired technology. Describe its function and cosmic potential.`;
                 const response = await queryCelestiaAPI(prompt);
                 setTimeout(() => {
                     hideTypingIndicator();
@@ -986,7 +1023,7 @@
                 showTypingIndicator();
                 const prompt = currentMode === 'basic'
                     ? `Using the CEM, explain a cosmic phenomenon simply.`
-                    : `With the Cosmic Exploration Module, map a cosmic anomaly or technosignature relevant to "${text}". Unveil its secrets.`;
+                    : `With the CEM, map a cosmic anomaly or technosignature relevant to "${text}". Unveil its secrets.`;
                 const response = await queryCelestiaAPI(prompt);
                 setTimeout(() => {
                     hideTypingIndicator();
@@ -996,7 +1033,7 @@
                 return;
             }
 
-            // General Query with Conversational Flow
+            // General Query
             showTypingIndicator();
             const response = await queryCelestiaAPI(text);
             setTimeout(() => {
